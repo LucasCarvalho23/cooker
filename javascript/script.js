@@ -95,14 +95,14 @@ class Cooker {
         if (this.electricity === false) {
             alert ("Ligue a eletricidade")
         } else if (this.electricity === true) {
-            this.spanturnLight.innerHTML = "Luz Ligada"
+            this.spanturnLight.innerHTML = "Lâmpada Ligada"
             this.spanturnLightButton.innerHTML = "Desligar"
             this.lightOvenTurnOn = true 
         } 
     }
 
     turnOffLightOven() {
-        this.spanturnLight.innerHTML = "Luz Desligada"
+        this.spanturnLight.innerHTML = "Lâmpada Desligada"
         this.spanturnLightButton.innerHTML = "Ligar"
         this.lightOvenTurnOn = false 
     }
