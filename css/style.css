@@ -1,3 +1,11 @@
+:root {
+    --color1: rgb(142, 223, 250);
+    --color2: rgb(142, 189, 250);
+    --color3: rgb(142, 155, 250);
+    --color4: rgb(142, 121, 250);
+    --color5: rgb(142, 87, 250);
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -17,5 +25,14 @@
 #lighterOven-id {
     padding: 10px;
     margin: 15px;
+    width: 80px;
+    background-color: var(--color1);
+    border: 1px solid gray;
+}
+
+#turnLight-id {
+    padding: 10px;
+    margin: 15px;
+    margin-left: 150px;
     width: 80px;
 }

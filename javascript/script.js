@@ -13,9 +13,11 @@ class Cooker {
         })
 
 
+
 //Oven
         this.lighterOven = document.querySelector ("#lighterOven-id")
         this.spanLighterOven = document.querySelector ("#spanLighterOven-id")
+        this.spanLighterButton = document.querySelector ("#spanLighterButton-id")
         this.lighterOvenTurnOn = false
 
 // Turn On and Turn Off the oven
@@ -27,7 +29,28 @@ class Cooker {
             }
         })
 
+
+
+// Light Oven
+        this.turnLight = document.querySelector ("#turnLight-id")
+        this.spanturnLight = document.querySelector ("#spanturnLight-id")
+        this.spanturnLightButton = document.querySelector ("#spanturnLightButton-id")
+        this.lightOvenTurnOn = false
+
+// Turn On and Turn Off the light of the oven
+        this.turnLight.addEventListener("click", () => { 
+            if (this.lightOvenTurnOn === false) {
+                this.turnOnLightOven()
+            } else {
+                this.turnOffLightOven()
+            }
+            
+        })
+
+
+
     }
+
 
 
 /* 
@@ -55,13 +78,33 @@ class Cooker {
             alert ("Ligue a eletricidade")
         } else if (this.electricity === true) {
             this.spanLighterOven.innerHTML = "Forno Ligado"
+            this.spanLighterButton.innerHTML = "Desligar"
             this.lighterOvenTurnOn = true 
         } 
     }
 
     turnOffOven() {
         this.spanLighterOven.innerHTML = "Forno Desligado"
+        this.spanLighterButton.innerHTML = "Ligar"
         this.lighterOvenTurnOn = false
+    }
+
+
+// Light Oven
+    turnOnLightOven() {
+        if (this.electricity === false) {
+            alert ("Ligue a eletricidade")
+        } else if (this.electricity === true) {
+            this.spanturnLight.innerHTML = "Luz Ligada"
+            this.spanturnLightButton.innerHTML = "Desligar"
+            this.lightOvenTurnOn = true 
+        } 
+    }
+
+    turnOffLightOven() {
+        this.spanturnLight.innerHTML = "Luz Desligada"
+        this.spanturnLightButton.innerHTML = "Ligar"
+        this.lightOvenTurnOn = false 
     }
 
 }
