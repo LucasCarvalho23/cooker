@@ -13,12 +13,6 @@ class Cooker {
             this.turnOn()
         })
 
-        
-            
-        
-
-        console.log (this.electricity)
-
     }
 
     
