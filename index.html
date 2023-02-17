@@ -10,33 +10,43 @@
 <body>
 
 <!-- Electricity -->
-    <div>
-        <button id = "buttonTurnOn-id" value = "Turn On"><span id = "spanTurnOn-id">Ligar</span></button>
-        <span>Eletricidade</span>
-    </div>
+    <div class = "main-container-class">
 
-<!-- Oven -->
-    <div>
-        <button id = "lighterOven-id" value = "Turn On"><span id = "spanLighterButton-id">Ligar</span></button>
-        <span id = "spanLighterOven-id">Forno Desligado</span>
+        <div class = "container-electricity-id">
+            <button id = "buttonTurnOn-id" value = "Turn On"><span id = "spanTurnOn-id">Ligar</span></button>
+            <span>Eletricidade</span>
+        </div>
+        <hr>
+        
+        <!-- Stove -->
+        <div class = "container-stove-class">
+            <span class = "stove-class" id = "stove01Span-id">Boca 1 apagada</span>
+            <span class = "stove-class" id = "stove02Span-id">Boca 2 apagada</span>
+        </div>
+        <div>
+            <button class = "stove-button-class" id = "stove01-id">Acender Boca 1</button>
+            <button class = "stove-button-class" id = "stove02-id">Acender Boca 2</button>
+        </div>
+        <div class = "container-stove-class">
+            <span class = "stove-class" id = "stove03Span-id">Boca 3 apagada</span>
+            <span class = "stove-class" id = "stove04Span-id">Boca 4 apagada</span>
+        </div>
+        <div>
+            <button class = "stove-button-class" id = "stove03-id">Acender Boca 3</button>
+            <button class = "stove-button-class" id = "stove04-id">Acender Boca 4</button>
+        </div>
+        <hr>
+        
+        <!-- Oven -->
+        <div class = "container-oven-class">
+            <button id = "lighterOven-id" value = "Turn On"><span id = "spanLighterButton-id">Ligar</span></button>
+            <span id = "spanLighterOven-id">Forno Desligado</span>
+        </div>
+        <div>
+            <button id = "turnLight-id" value = "Turn On"><span id = "spanturnLightButton-id">Ligar</span></button>
+            <span id = "spanturnLight-id">Lâmpada desligada</span>
+        </div>
 
-        <button id = "turnLight-id" value = "Turn On"><span id = "spanturnLightButton-id">Ligar</span></button>
-        <span id = "spanturnLight-id">Lâmpada desligada</span>
-    </div>
-
-<!-- Stove -->
-    <div class = "container-stove-class">
-        <span class = "stove-class" id = "stove01Span-id">Boca 1 apagada</span>
-        <span class = "stove-class" id = "stove02Span-id">Boca 2 apagada</span>
-        <span class = "stove-class" id = "stove03Span-id">Boca 3 apagada</span>
-        <span class = "stove-class" id = "stove04Span-id">Boca 4 apagada</span>
-    </div>
-
-    <div>
-        <button class = "stove-button-class" id = "stove01-id">Acender Boca 1</button>
-        <button class = "stove-button-class" id = "stove02-id">Acender Boca 2</button>
-        <button class = "stove-button-class" id = "stove03-id">Acender Boca 3</button>
-        <button class = "stove-button-class" id = "stove04-id">Acender Boca 4</button>
     </div>
     
     <script src = "javascript/script.js"></script>

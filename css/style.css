@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 :root {
+    --color0: rgb(250, 234, 218);
     --color1: rgb(142, 223, 250);
     --color2: rgb(142, 189, 250);
     --color3: rgb(142, 155, 250);
@@ -15,7 +16,19 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.main-container-class {
+    background-color: var(--color0);
+    width: 400px;
+    border: 1px solid black;
+}
+
+
 /* Electricity */
+
+.container-electricity-id {
+    height: 50px;
+}
+
 #buttonTurnOn-id {
     padding: 10px;
     margin: 15px;
@@ -23,31 +36,16 @@
     cursor: pointer;
 }
 
-
-/* Oven */
-
-#lighterOven-id {
-    padding: 10px;
-    margin: 15px;
-    width: 80px;
-    background-color: var(--color1);
-    border: 1px solid gray;
-    cursor: pointer;
-}
-
-#turnLight-id {
-    padding: 10px;
-    margin: 15px;
-    margin-left: 150px;
-    width: 80px;
-    cursor: pointer;
+hr {
+    margin-top: 30px;
+    width: 400px;
 }
 
 
 /* Stove */
 
 .container-stove-class {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .stove-class {
@@ -82,4 +80,27 @@
     background-color: var(--color5);
     border: 1px solid gray;
     cursor: pointer;           
+}
+
+
+/* Oven */
+
+.container-oven-class {
+    margin-top: 30px;
+}
+
+#lighterOven-id {
+    padding: 10px;
+    margin: 15px;
+    width: 80px;
+    background-color: var(--color1);
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+#turnLight-id {
+    padding: 10px;
+    margin: 15px;
+    width: 80px;
+    cursor: pointer;
 }
