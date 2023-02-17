@@ -66,7 +66,7 @@ export default class Cooker {
                        this.stoveOver = true 
                     }
                 } else {
-                    this.turnOffOven(this.stoveInfo, this.stoveSpan)
+                    this.turnOffOven(this.stoveSpan, this.stoveInfo)
                     this.stoveOver = false
                 }
             })
