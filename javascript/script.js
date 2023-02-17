@@ -23,9 +23,11 @@ export default class Cooker {
 // Turn On and Turn Off the oven
         this.lighterOven.addEventListener("click", () => { 
             if (this.lighterOvenTurnOn === false) {
-                this.turnOnOven()
+                this.turnOnOven(this.electricity, this.spanLighterOven, this.spanLighterButton)
+                this.lighterOvenTurnOn = true 
             } else {
-                this.turnOffOven()
+                this.turnOffOven(this.spanLighterOven, this.spanLighterButton)
+                this.lighterOvenTurnOn = false
             }
         })
 
@@ -40,9 +42,11 @@ export default class Cooker {
 // Turn On and Turn Off the light of the oven
         this.turnLight.addEventListener("click", () => { 
             if (this.lightOvenTurnOn === false) {
-                this.turnOnLightOven()
+                this.turnOnOven(this.electricity, this.spanturnLight, this.spanturnLightButton)
+                this.lightOvenTurnOn = true
             } else {
-                this.turnOffLightOven()
+                this.turnOffOven(this.spanturnLight, this.spanturnLightButton)
+                this.lightOvenTurnOn = false
             }
             
         })
@@ -57,9 +61,13 @@ export default class Cooker {
                 this.stoveInfo = document.querySelector(`#stove${idButton}-id`)
                 this.stoveSpan = document.querySelector(`#stove${idButton}Span-id`)
                 if (this.stoveOver === false) {
-                    this.turnOnStove()
+                    this.turnOnOven(this.electricity, this.stoveSpan, this.stoveInfo)
+                    if (this.electricity === true) {
+                       this.stoveOver = true 
+                    }
                 } else {
-                    this.turnOffStove()
+                    this.turnOffOven(this.stoveInfo, this.stoveSpan)
+                    this.stoveOver = false
                 }
             })
         }
@@ -99,63 +107,20 @@ export default class Cooker {
 
 
 
-// Oven    
-    turnOnOven() {
+// Factory    
+    turnOnOven(electricityValue, spanOutValue, spanInvalue) {
 
         this.electricityTest()
 
-        if (this.electricity === true) {
-            this.spanLighterOven.innerHTML = "Forno Ligado"
-            this.spanLighterButton.innerHTML = "Desligar"
-            this.lighterOvenTurnOn = true 
+        if (electricityValue === true) {
+            spanOutValue.innerHTML = "Aceso"
+            spanInvalue.innerHTML = "Apagar"
         } 
     }
 
-    turnOffOven() {
-        this.spanLighterOven.innerHTML = "Forno Desligado"
-        this.spanLighterButton.innerHTML = "Ligar"
-        this.lighterOvenTurnOn = false
-    }
-
-
-
-// Light Oven
-    turnOnLightOven() {
-
-        this.electricityTest()
-        
-        if (this.electricity === true) {
-            this.spanturnLight.innerHTML = "Lâmpada Ligada"
-            this.spanturnLightButton.innerHTML = "Desligar"
-            this.lightOvenTurnOn = true 
-        } 
-    }
-
-    turnOffLightOven() {
-        this.spanturnLight.innerHTML = "Lâmpada Desligada"
-        this.spanturnLightButton.innerHTML = "Ligar"
-        this.lightOvenTurnOn = false 
-    }
-
-
-
-// Stove
-
-    turnOnStove() {
-        
-        this.electricityTest()
-        
-        if (this.electricity === true) {
-            this.stoveSpan.innerHTML = "Boca acesa"
-            this.stoveInfo.innerHTML = "Apagar boca"
-            this.stoveOver = true 
-        }  
-    }
-
-    turnOffStove() {
-        this.stoveSpan.innerHTML = "Boca apagada"
-        this.stoveInfo.innerHTML = "Acender boca"
-        this.stoveOver = false 
+    turnOffOven(spanOutValue, spanInvalue) {
+        spanOutValue.innerHTML = "Apagado"
+        spanInvalue.innerHTML = "Acender"
     }
     
 

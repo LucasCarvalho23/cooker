@@ -48,6 +48,10 @@ hr {
     margin-top: 30px;
 }
 
+.bottom-stove-class {
+    margin-bottom: 30px;
+}
+
 .stove-class {
     padding: 20px;
     margin-left: 25px
@@ -85,10 +89,6 @@ hr {
 
 
 /* Oven */
-
-.container-oven-class {
-    margin-top: 30px;
-}
 
 #lighterOven-id {
     padding: 10px;
