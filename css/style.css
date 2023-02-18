@@ -17,8 +17,6 @@
 }
 
 .main-container-class {
-    background-color: var(--color0);
-    width: 400px;
     border: 1px solid black;
     margin: auto;
     margin-top: 50px;
@@ -95,6 +93,10 @@ hr {
 
 
 /* Oven */
+
+.container-oven-class {
+    background-color: rgb(124, 185, 206);
+}
 
 #lighterOven-id {
     padding: 10px;

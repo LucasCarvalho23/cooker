@@ -2,6 +2,19 @@ export default class Cooker {
 
     constructor() {
         
+        this.brand = 'Bertazzoni'
+
+// Oven
+    document.querySelector(".main-container-class").style.backgroundColor = "rgb(250, 234, 218)"
+    document.querySelector(".main-container-class").style.width = "400px"
+    document.querySelector(".main-container-class").style.height = "493px"
+
+// Glass Door 
+        document.querySelector(".container-oven-class").style.width = "300px"
+        document.querySelector(".container-oven-class").style.height = "75px"
+        document.querySelector(".container-oven-class").style.margin = "auto"
+        document.querySelector(".container-oven-class").style.marginBottom = "5px"
+
 // Electricity
         this.buttonTurnOn = document.querySelector ("#buttonTurnOn-id")       
         this.spanTurnOn = document.querySelector ("#spanTurnOn-id")
@@ -43,6 +56,7 @@ export default class Cooker {
         this.turnLight.addEventListener("click", () => { 
             if (this.lightOvenTurnOn === false) {
                 this.turnOnOven(this.electricity, this.spanturnLight, this.spanturnLightButton)
+                this.turnOnLight(this.electricity)
                 this.lightOvenTurnOn = true
             } else {
                 this.turnOffOven(this.spanturnLight, this.spanturnLightButton)
@@ -96,6 +110,9 @@ export default class Cooker {
             this.spanTurnOn.innerHTML = "Ligar"
             this.buttonTurnOn.value = "Turn On"
             this.electricity = false   
+            document.querySelector(".container-oven-class").style.backgroundColor = "rgb(124, 185, 206)"
+            this.turnOffOven(this.spanturnLight, this.spanturnLightButton)
+            this.lightOvenTurnOn = false
         }
     }
 
@@ -121,6 +138,17 @@ export default class Cooker {
     turnOffOven(spanOutValue, spanInvalue) {
         spanOutValue.innerHTML = "Apagado"
         spanInvalue.innerHTML = "Acender"
+    }
+
+
+    turnOnLight(value) {
+
+        this.electricityTest()
+
+        if (value === true) {
+            document.querySelector(".container-oven-class").style.backgroundColor = "rgba(173, 216, 230, 0.541)"
+        } 
+
     }
     
 
