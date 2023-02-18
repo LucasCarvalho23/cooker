@@ -68,25 +68,21 @@ hr {
 }
 
 #stove01-id {
-    background-color: var(--color2);
     border: 1px solid gray;
     cursor: pointer;
 }
 
 #stove02-id {
-    background-color: var(--color3);
     border: 1px solid gray;
     cursor: pointer; 
 }
 
 #stove03-id {
-    background-color: var(--color4);
     border: 1px solid gray;
     cursor: pointer;          
 }
 
 #stove04-id {
-    background-color: var(--color5);
     border: 1px solid gray;
     cursor: pointer;           
 }
@@ -102,7 +98,6 @@ hr {
     padding: 10px;
     margin: 15px;
     width: 80px;
-    background-color: var(--color1);
     border: 1px solid gray;
     cursor: pointer;
 }

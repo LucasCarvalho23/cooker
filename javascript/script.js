@@ -5,15 +5,23 @@ export default class Cooker {
         this.brand = 'Bertazzoni'
 
 // Oven
-    document.querySelector(".main-container-class").style.backgroundColor = "rgb(250, 234, 218)"
-    document.querySelector(".main-container-class").style.width = "400px"
-    document.querySelector(".main-container-class").style.height = "493px"
+        document.querySelector(".main-container-class").style.backgroundColor = "rgb(250, 234, 218)"
+        document.querySelector(".main-container-class").style.width = "400px"
+        document.querySelector(".main-container-class").style.height = "493px"
 
 // Glass Door 
         document.querySelector(".container-oven-class").style.width = "300px"
         document.querySelector(".container-oven-class").style.height = "75px"
         document.querySelector(".container-oven-class").style.margin = "auto"
         document.querySelector(".container-oven-class").style.marginBottom = "5px"
+
+// Lighter
+        document.querySelector("#stove01-id").style.backgroundColor = "rgb(142, 189, 250)"
+        document.querySelector("#stove02-id").style.backgroundColor = "rgb(142, 155, 250)"
+        document.querySelector("#stove03-id").style.backgroundColor = "rgb(142, 121, 250)"
+        document.querySelector("#stove04-id").style.backgroundColor = "rgb(142, 87, 250)"
+        document.querySelector("#lighterOven-id").style.backgroundColor = "rgb(142, 223, 250)"
+
 
 // Electricity
         this.buttonTurnOn = document.querySelector ("#buttonTurnOn-id")       
