@@ -79,6 +79,8 @@ export default class Cooker {
         this.lightOvenTurnOn = true;
       } else {
         this.turnOffOven(this.spanturnLight, this.spanturnLightButton);
+        document.querySelector(".container-oven-class").style.backgroundColor =
+        "rgb(124, 185, 206)";
         this.lightOvenTurnOn = false;
       }
     });
