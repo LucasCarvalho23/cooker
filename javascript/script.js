@@ -2,6 +2,8 @@ export default class Cooker {
   constructor() {
     this.brand = "Bertazzoni";
 
+    document.querySelector("#brand-id").innerHTML = `${this.brand}`
+
     // Oven
     document.querySelector(".main-container-class").style.backgroundColor =
       "rgb(250, 234, 218)";
@@ -82,7 +84,6 @@ export default class Cooker {
     });
 
     // Stove
-
     this.stoveAction = function (element) {
       element.addEventListener("click", (e) => {
         let idButton = e.target.id.replace(/[^0-9]/g, ""); // only numbers
@@ -108,7 +109,7 @@ export default class Cooker {
 
   /* 
     FUNCTIONS
-*/
+  */
 
   // Electricity
   turnOn(value) {
