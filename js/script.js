@@ -151,6 +151,8 @@ export default class Cooker {
     spanInvalue.innerHTML = "Acender";
   }
 
+
+  // Change color the glass when turn off the electricity
   turnOnLight(value) {
     this.electricityTest();
 
