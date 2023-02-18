@@ -8,7 +8,7 @@ export default class Cooker {
     document.querySelector(".main-container-class").style.backgroundColor =
       "rgb(250, 234, 218)";
     document.querySelector(".main-container-class").style.width = "400px";
-    document.querySelector(".main-container-class").style.height = "493px";
+    document.querySelector(".main-container-class").style.height = "505px";
 
     // Glass Door
     document.querySelector(".container-oven-class").style.width = "300px";
